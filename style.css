@@ -59,6 +59,11 @@ nav a {
   font-weight: bold;
 }
 
+section {
+  padding: 40px;
+  text-align: center;
+}
+
 table {
   width: 80%;
   margin: 20px auto;
@@ -69,4 +74,52 @@ th, td {
   border: 1px solid #FFD700;
   padding: 10px;
   text-align: center;
+}
+
+/* Cronograma Gantt */
+.gantt {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.fase {
+  background-color: #FFD700;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+form button {
+  background-color: #FFD700;
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
 }

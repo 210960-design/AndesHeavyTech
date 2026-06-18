@@ -1,3 +1,4 @@
+// Dashboard dinámico
 const maquinas = [
   { nombre: "CAT 320D", temp: 86, estado: "🟢 OK" },
   { nombre: "Komatsu WA380", temp: 101, estado: "🟡 Warning" },
@@ -11,6 +12,14 @@ function actualizarTabla() {
     tabla.innerHTML += `<tr><td>${m.nombre}</td><td>${m.temp}°C</td><td>${m.estado}</td></tr>`;
   });
 }
-
 setInterval(actualizarTabla, 2000);
 actualizarTabla();
+
+// Gráfico financiero con Chart.js
+const ctx = document.getElementById('finanzasChart').getContext('2d');
+const finanzasChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Año 1', 'Año 3', 'Año 5', 'Año 8'],
+    datasets: [{
+      label: 'Ingresos (S

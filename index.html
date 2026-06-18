@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ANDES HEAVY TECH S.A.C.</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
@@ -25,6 +26,7 @@
     </nav>
   </header>
 
+  <!-- Hero -->
   <section id="inicio" class="hero">
     <div class="overlay"></div>
     <div class="hero-text">
@@ -38,6 +40,32 @@
     </div>
   </section>
 
+  <!-- Nosotros -->
+  <section id="nosotros">
+    <h3>Resumen Ejecutivo</h3>
+    <p>La empresa Andes Heavy Tech S.A.C. será una organización especializada en mantenimiento, diagnóstico y monitoreo inteligente de maquinaria pesada para minería, construcción y transporte en Cusco.</p>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios">
+    <h3>Servicios Ofrecidos</h3>
+    <ul>
+      <li>🔧 Diagnóstico de motores</li>
+      <li>⚙️ Mantenimiento preventivo</li>
+      <li>🛢 Sistemas hidráulicos</li>
+      <li>📡 Sensores IoT</li>
+      <li>🤖 IA predictiva</li>
+      <li>📊 Reportes y analytics</li>
+    </ul>
+  </section>
+
+  <!-- IA -->
+  <section id="ia">
+    <h3>Implementación de IA</h3>
+    <p>Los sensores enviarán información a una base de datos. La IA analizará tendencias, patrones y comportamientos anormales para generar alertas preventivas.</p>
+  </section>
+
+  <!-- Dashboard -->
   <section id="dashboard">
     <h3>Dashboard IA - Simulación en tiempo real</h3>
     <table id="tablaMaquinas">
@@ -45,8 +73,34 @@
     </table>
   </section>
 
-  <footer>
+  <!-- Proyecto -->
+  <section id="proyecto">
+    <h3>Proyección Financiera</h3>
+    <canvas id="finanzasChart" width="400" height="200"></canvas>
+
+    <h3>Cronograma de Implementación</h3>
+    <div class="gantt">
+      <div class="fase" style="grid-column: 1 / 3;">Fase 1 (2026)</div>
+      <div class="fase" style="grid-column: 3 / 5;">Fase 2 (2027-2028)</div>
+      <div class="fase" style="grid-column: 5 / 7;">Fase 3 (2029-2030)</div>
+      <div class="fase" style="grid-column: 7 / 10;">Fase 4 (2031-2033)</div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h3>Contacto</h3>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="text" placeholder="Empresa" required>
+      <input type="email" placeholder="Correo" required>
+      <textarea placeholder="Mensaje"></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
     <p>📧 210960@unsaac.edu.pe | 📞 951728950 | 📍 San Sebastián, Cusco</p>
+  </section>
+
+  <footer>
     <p>© 2026 Andes Heavy Tech S.A.C. Todos los derechos reservados.</p>
   </footer>
 
