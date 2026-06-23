@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - Andes Heavy Tech</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("TU_USER_ID_DE_EMAILJS"); 
+    })();
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Andes Heavy Tech Logo">
+      <h1>ANDES HEAVY TECH S.A.C.</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="ia.html">IA Predictiva</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="proyecto.html">Proyecto</a></li>
+        <li><a href="misionvision.html">Misión y Visión</a></li>
+        <li><a href="comparacion.html">Comparación</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Contacto -->
+  <section class="contacto">
+    <div class="overlay"></div>
+    <div class="contenido">
+      <h2>Contáctanos</h2>
+      <p>Estamos listos para atender tus necesidades de mantenimiento y diagnóstico de maquinaria pesada.</p>
+
+      <form id="contactForm">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="text" name="empresa" placeholder="Empresa" required>
+        <input type="email" name="correo" placeholder="Correo" required>
+        <textarea name="mensaje" placeholder="Mensaje"></textarea>
+        <button type="submit" class="btn">Enviar por Email</button>
+      </form>
+
+      <div class="contact-info">
+        <p>📧 210960@unsaac.edu.pe</p>
+        <p>📞 951728950</p>
+        <p>📍 San Sebastián, Cusco</p>
+      </div>
+
+      <!-- Botón WhatsApp -->
+      <a href="https://wa.me/51951728950" target="_blank" class="btn whatsapp">📱 Contactar por WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Andes Heavy Tech S.A.C. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
