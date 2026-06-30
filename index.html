@@ -3,189 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andes Heavy Tech S.A.C. | Mantenimiento Maquinaria Pesada</title>
+    <title>Andes Heavy Tech S.A.C. | Mantenimiento Inteligente</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.85)), 
-                        url('./attachments/fondo-industrial.jpg') center/cover no-repeat;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
         }
-        .service-card { transition: all 0.4s ease; }
-        .service-card:hover { transform: translateY(-12px); }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                        url('./attachments/fondo-industrial.jpg') center/cover no-repeat fixed;
+            animation: heroZoom 25s infinite alternate ease-in-out;
+        }
+        
+        @keyframes heroZoom {
+            from { background-size: 110%; }
+            to { background-size: 130%; }
+        }
+        
+        .service-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        
+        .service-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-20px) scale(1.05);
+            box-shadow: 0 35px 70px -15px rgba(245, 158, 11, 0.4);
+        }
+        
+        .gear {
+            animation: rotateGear 20s linear infinite;
+        }
+        
+        @keyframes rotateGear {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
-<body class="bg-zinc-950 text-white">
+<body class="bg-zinc-950 text-white overflow-x-hidden">
 
     <!-- HEADER -->
-    <header class="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
+    <header class="bg-zinc-950/95 backdrop-blur-lg border-b border-zinc-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-x-3">
-                <img src="./attachments/logo.png" alt="Logo" class="h-14">
+            <div class="flex items-center gap-x-4">
+                <img src="./attachments/logo.png" alt="Logo" class="h-14 drop-shadow-xl">
                 <div>
                     <span class="text-3xl font-bold tracking-tighter">ANDES</span>
-                    <span class="block text-xs text-amber-400 font-mono -mt-1">HEAVY TECH S.A.C.</span>
+                    <span class="block text-amber-400 text-xs font-mono tracking-[3px]">HEAVY TECH</span>
                 </div>
             </div>
-            <nav class="hidden md:flex gap-x-8 text-sm font-medium">
-                <a href="#inicio" class="hover:text-amber-400">Inicio</a>
-                <a href="#servicios" class="hover:text-amber-400">Servicios</a>
-                <a href="#nosotros" class="hover:text-amber-400">Nosotros</a>
-                <a href="#contacto" class="hover:text-amber-400">Contacto</a>
+            
+            <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#inicio" class="hover:text-amber-400 transition">Inicio</a>
+                <a href="#servicios" class="hover:text-amber-400 transition">Servicios</a>
+                <a href="#nosotros" class="hover:text-amber-400 transition">Nosotros</a>
+                <a href="#contacto" class="hover:text-amber-400 transition">Contacto</a>
             </nav>
-            <a href="tel:951728950" class="bg-amber-500 text-zinc-950 px-6 py-3 rounded-2xl font-bold hover:bg-amber-400 transition">
-                📞 951 728 950
+            
+            <a href="tel:951728950" class="flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold px-7 py-3.5 rounded-3xl transition-all hover:scale-105">
+                <i class="fa-solid fa-phone"></i> 951 728 950
             </a>
         </div>
     </header>
 
     <!-- HERO -->
-    <section id="inicio" class="hero-bg h-screen flex items-center">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                MANTENIMIENTO <span class="text-amber-400">INTELIGENTE</span><br>PARA MAQUINARIA PESADA
+    <section id="inicio" class="hero-bg h-screen flex items-center relative">
+        <div class="max-w-7xl mx-auto px-6 text-center z-10">
+            <h1 class="text-6xl md:text-7xl font-bold leading-none mb-6 tracking-tighter fade-in">
+                MANTENIMIENTO<br><span class="text-amber-400">INTELIGENTE</span>
             </h1>
-            <p class="text-xl max-w-xl mx-auto mb-10">Soluciones especializadas en diagnóstico, mantenimiento y monitoreo para minería y construcción.</p>
-            <a href="#contacto" class="bg-amber-500 text-zinc-950 font-semibold px-10 py-5 rounded-3xl text-lg inline-flex items-center gap-3 hover:bg-amber-400">
-                Contactar Ahora <i class="fa-solid fa-arrow-right"></i>
+            <p class="text-2xl text-gray-200 max-w-2xl mx-auto mb-10 fade-in" style="animation-delay: 200ms">
+                Tecnología + Experiencia para mantener tu flota siempre operativa
+            </p>
+            <a href="#contacto" 
+               class="inline-flex items-center gap-4 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xl px-12 py-6 rounded-3xl transition-all hover:scale-110 fade-in"
+               style="animation-delay: 400ms">
+                SOLICITAR SERVICIO
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
+        
+        <!-- Decorative gears -->
+        <div class="absolute bottom-10 right-10 text-amber-400/10 text-8xl gear hidden lg:block">⚙️</div>
+        <div class="absolute top-32 left-10 text-amber-400/10 text-6xl gear hidden xl:block" style="animation-duration: 30s;">⚙️</div>
     </section>
 
     <!-- SERVICIOS -->
-    <section id="servicios" class="py-24 bg-zinc-900">
+    <section id="servicios" class="py-28 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-4">Nuestros Servicios</h2>
-            <p class="text-center text-gray-400 mb-16">Tecnología + Experiencia para maximizar la productividad de tu flota</p>
+            <h2 class="text-5xl font-bold text-center mb-4 fade-in">Nuestros Servicios</h2>
+            <p class="text-center text-gray-400 mb-16 max-w-lg mx-auto fade-in" style="animation-delay: 200ms">
+                Soluciones técnicas avanzadas para maquinaria pesada
+            </p>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/motor-diesel.jpg" alt="Diagnóstico Motores" class="w-full h-56 object-cover">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Diagnóstico de Motores</h3>
-                        <p class="text-gray-400">Análisis avanzado de motores diésel con herramientas profesionales.</p>
-                    </div>
-                </div>
-
-                <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/mangueras-sistema-hidraulico.jpg" alt="Sistemas Hidráulicos" class="w-full h-56 object-cover">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Sistemas Hidráulicos</h3>
-                        <p class="text-gray-400">Mangueras, bombas, cilindros y mantenimiento completo de sistemas hidráulicos.</p>
-                    </div>
-                </div>
-
-                <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/fallas-confiabilidad.webp" alt="Análisis de Fallas" class="w-full h-56 object-cover">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Análisis de Fallas y Confiabilidad</h3>
-                        <p class="text-gray-400">Identificación y prevención de fallas para reducir tiempos de inactividad.</p>
-                    </div>
-                </div>
-
-                <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/Sensores-IoT-y-monitoreo.jpg" alt="Monitoreo IoT" class="w-full h-56 object-cover">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Monitoreo IoT</h3>
-                        <p class="text-gray-400">Sensores en tiempo real para control de operación y estado de la maquinaria.</p>
-                    </div>
-                </div>
-
-                <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/inteligencia-predictiva.jpg" alt="Mantenimiento Predictivo" class="w-full h-56 object-cover">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Mantenimiento Predictivo</h3>
-                        <p class="text-gray-400">Programas planificados y predictivos para prolongar la vida útil de los equipos.</p>
-                    </div>
-                </div>
-
-                <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/informes.jpg" alt="Reportes Técnicos" class="w-full h-56 object-cover">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Reportes Técnicos</h3>
-                        <p class="text-gray-400">Informes detallados con recomendaciones y análisis de rendimiento.</p>
-                    </div>
-                </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+                <!-- Se llenan con JavaScript para animación secuencial -->
             </div>
         </div>
     </section>
 
-    <!-- MISIÓN Y VISIÓN -->
+    <!-- MISIÓN / VISIÓN -->
     <section id="nosotros" class="py-24 bg-black">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-            <div class="bg-zinc-900 p-10 rounded-3xl">
-                <h3 class="text-amber-400 uppercase tracking-widest mb-4">Nuestra Misión</h3>
-                <p class="text-gray-300">Brindar soluciones técnicas de alto nivel en mantenimiento y monitoreo de maquinaria pesada utilizando tecnología moderna.</p>
+            <div class="bg-zinc-900 p-10 rounded-3xl border border-amber-400/10 fade-in">
+                <h3 class="text-amber-400 text-2xl font-bold mb-6">NUESTRA MISIÓN</h3>
+                <p class="text-gray-300 leading-relaxed text-lg">Brindar soluciones de mantenimiento inteligente que maximicen la disponibilidad y reduzcan costos operativos.</p>
             </div>
-            <div class="bg-zinc-900 p-10 rounded-3xl">
-                <h3 class="text-amber-400 uppercase tracking-widest mb-4">Nuestra Visión</h3>
-                <p class="text-gray-300">Ser la empresa referente en el sur del Perú en mantenimiento predictivo de maquinaria pesada.</p>
+            <div class="bg-zinc-900 p-10 rounded-3xl border border-amber-400/10 fade-in" style="animation-delay: 200ms">
+                <h3 class="text-amber-400 text-2xl font-bold mb-6">NUESTRA VISIÓN</h3>
+                <p class="text-gray-300 leading-relaxed text-lg">Ser líderes en mantenimiento predictivo de maquinaria pesada en el sur del Perú.</p>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer id="contacto" class="bg-black py-16 border-t border-zinc-800">
+    <footer id="contacto" class="bg-zinc-950 py-20">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <img src="./attachments/logo.png" alt="Andes Heavy Tech" class="h-16 mx-auto mb-6">
+            <img src="./attachments/logo.png" alt="Logo" class="h-20 mx-auto mb-8">
             <p class="text-4xl font-bold mb-3">ANDES HEAVY TECH S.A.C.</p>
-            <p class="text-2xl text-amber-400 mb-8">951 728 950</p>
-            <p class="text-gray-500">© 2026 Andes Heavy Tech S.A.C. | Sur del Perú</p>
+            <p class="text-3xl text-amber-400 font-semibold mb-8">951 728 950</p>
+            <p class="text-gray-500">© 2026 Andes Heavy Tech • Sur del Perú</p>
         </div>
     </footer>
 
     <!-- CHATBOT -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <button onclick="toggleChat()" class="w-16 h-16 bg-amber-500 hover:bg-amber-400 rounded-3xl shadow-2xl flex items-center justify-center text-3xl transition">
+    <div class="fixed bottom-8 right-8 z-50">
+        <button onclick="toggleChat()" 
+                class="w-16 h-16 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-3xl shadow-2xl flex items-center justify-center text-3xl hover:scale-110 active:scale-95 transition-all">
             <i class="fa-solid fa-headset"></i>
         </button>
-        
-        <div id="chat-window" class="hidden fixed bottom-28 right-6 w-96 bg-zinc-900 rounded-3xl shadow-2xl border border-zinc-700 overflow-hidden">
-            <div class="bg-zinc-800 p-5 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <span class="text-3xl">🤖</span>
-                    <div>
-                        <p class="font-semibold">Asistente Técnico</p>
-                        <p class="text-emerald-400 text-sm">● En línea</p>
-                    </div>
-                </div>
-                <button onclick="toggleChat()" class="text-3xl">×</button>
-            </div>
-            <div id="chat-messages" class="h-96 p-5 overflow-y-auto space-y-4"></div>
-            <div class="p-4 border-t border-zinc-700">
-                <input id="chat-input" type="text" placeholder="¿Qué necesitas?" 
-                       class="w-full bg-zinc-800 border border-zinc-600 rounded-3xl px-6 py-4 text-sm focus:border-amber-400 outline-none"
-                       onkeypress="if(event.key === 'Enter') sendMessage()">
-            </div>
-        </div>
     </div>
 
     <script>
+        // Animación de tarjetas al hacer scroll
+        function animateOnScroll() {
+            const cards = document.querySelectorAll('.service-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => observer.observe(card));
+        }
+
+        // Crear tarjetas de servicio con animación
+        const services = [
+            { img: "./attachments/motor-diesel.jpg", title: "Diagnóstico de Motores", desc: "Análisis avanzado y escaneo profesional." },
+            { img: "./attachments/mangueras-sistema-hidraulico.jpg", title: "Sistemas Hidráulicos", desc: "Mantenimiento completo de mangueras y componentes." },
+            { img: "./attachments/fallas-confiabilidad.webp", title: "Análisis de Fallas", desc: "Detección y prevención de averías." },
+            { img: "./attachments/Sensores-IoT-y-monitoreo.jpg", title: "Monitoreo IoT", desc: "Control en tiempo real de tu flota." },
+            { img: "./attachments/inteligencia-predictiva.jpg", title: "Mantenimiento Predictivo", desc: "Tecnología para evitar paradas." },
+            { img: "./attachments/informes.jpg", title: "Reportes Técnicos", desc: "Análisis detallado y recomendaciones." }
+        ];
+
+        function createServices() {
+            const container = document.getElementById('services-grid');
+            services.forEach(service => {
+                const card = document.createElement('div');
+                card.className = `service-card bg-zinc-800 rounded-3xl overflow-hidden`;
+                card.innerHTML = `
+                    <img src="${service.img}" alt="${service.title}" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-3">${service.title}</h3>
+                        <p class="text-gray-400">${service.desc}</p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
         function toggleChat() {
-            document.getElementById('chat-window').classList.toggle('hidden');
+            alert("🤖 Asistente Técnico\n\nUn especialista se pondrá en contacto contigo al 951 728 950.");
         }
-        function addMessage(text, type) {
-            const container = document.getElementById('chat-messages');
-            const div = document.createElement('div');
-            if (type === "bot") {
-                div.innerHTML = `<div class="flex gap-3"><div class="bg-zinc-700 p-4 rounded-3xl rounded-tl-none">${text}</div></div>`;
-            } else {
-                div.innerHTML = `<div class="flex justify-end"><div class="bg-amber-500 text-zinc-950 p-4 rounded-3xl rounded-tr-none">${text}</div></div>`;
-            }
-            container.appendChild(div);
-            container.scrollTop = container.scrollHeight;
-        }
-        function sendMessage() {
-            const input = document.getElementById('chat-input');
-            if (!input.value.trim()) return;
-            addMessage(input.value, "user");
+
+        // Inicializar
+        window.onload = () => {
+            createServices();
             setTimeout(() => {
-                addMessage("Gracias por tu consulta. Te contactaremos pronto al 951 728 950.", "bot");
-            }, 700);
-            input.value = '';
-        }
+                animateOnScroll();
+            }, 800);
+        };
     </script>
 </body>
 </html>
