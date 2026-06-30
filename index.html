@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andes Heavy Tech S.A.C. | Mantenimiento de Maquinaria Pesada</title>
+    <title>Andes Heavy Tech S.A.C. | Mantenimiento Maquinaria Pesada</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body { font-family: 'Inter', system_ui, sans-serif; }
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.85)), 
                         url('./attachments/fondo-industrial.jpg') center/cover no-repeat;
         }
         .service-card { transition: all 0.4s ease; }
-        .service-card:hover { transform: translateY(-15px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5); }
-        .chatbot-toggle { animation: pulse 2s infinite; }
-        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+        .service-card:hover { transform: translateY(-12px); }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
@@ -31,13 +29,13 @@
                     <span class="block text-xs text-amber-400 font-mono -mt-1">HEAVY TECH S.A.C.</span>
                 </div>
             </div>
-            <nav class="hidden md:flex items-center gap-x-8">
-                <a href="#inicio" class="hover:text-amber-400 transition">Inicio</a>
-                <a href="#servicios" class="hover:text-amber-400 transition">Servicios</a>
-                <a href="#nosotros" class="hover:text-amber-400 transition">Nosotros</a>
-                <a href="#contacto" class="hover:text-amber-400 transition">Contacto</a>
+            <nav class="hidden md:flex gap-x-8 text-sm font-medium">
+                <a href="#inicio" class="hover:text-amber-400">Inicio</a>
+                <a href="#servicios" class="hover:text-amber-400">Servicios</a>
+                <a href="#nosotros" class="hover:text-amber-400">Nosotros</a>
+                <a href="#contacto" class="hover:text-amber-400">Contacto</a>
             </nav>
-            <a href="tel:951728950" class="bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold px-6 py-3 rounded-2xl transition">
+            <a href="tel:951728950" class="bg-amber-500 text-zinc-950 px-6 py-3 rounded-2xl font-bold hover:bg-amber-400 transition">
                 📞 951 728 950
             </a>
         </div>
@@ -45,15 +43,13 @@
 
     <!-- HERO -->
     <section id="inicio" class="hero-bg h-screen flex items-center">
-        <div class="max-w-7xl mx-auto px-6 text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-6 text-center">
             <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
                 MANTENIMIENTO <span class="text-amber-400">INTELIGENTE</span><br>PARA MAQUINARIA PESADA
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto md:mx-0 mb-10">
-                Diagnóstico, mantenimiento predictivo y monitoreo IoT para minería, construcción y movimiento de tierras.
-            </p>
-            <a href="#contacto" class="inline-block bg-amber-500 text-zinc-950 font-semibold text-lg px-10 py-5 rounded-3xl hover:bg-amber-400 transition">
-                Solicitar Cotización
+            <p class="text-xl max-w-xl mx-auto mb-10">Soluciones especializadas en diagnóstico, mantenimiento y monitoreo para minería y construcción.</p>
+            <a href="#contacto" class="bg-amber-500 text-zinc-950 font-semibold px-10 py-5 rounded-3xl text-lg inline-flex items-center gap-3 hover:bg-amber-400">
+                Contactar Ahora <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
     </section>
@@ -62,49 +58,54 @@
     <section id="servicios" class="py-24 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-5xl font-bold text-center mb-4">Nuestros Servicios</h2>
-            <p class="text-center text-gray-400 mb-16">Soluciones especializadas con tecnología de vanguardia</p>
+            <p class="text-center text-gray-400 mb-16">Tecnología + Experiencia para maximizar la productividad de tu flota</p>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/motor-diesel.jpg" alt="Motores" class="w-full h-56 object-cover">
+                    <img src="./attachments/motor-diesel.jpg" alt="Diagnóstico Motores" class="w-full h-56 object-cover">
                     <div class="p-8">
                         <h3 class="text-2xl font-semibold mb-3">Diagnóstico de Motores</h3>
-                        <p class="text-gray-400">Análisis avanzado de motores diésel con herramientas de escaneo profesional.</p>
+                        <p class="text-gray-400">Análisis avanzado de motores diésel con herramientas profesionales.</p>
                     </div>
                 </div>
+
                 <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/mantenimiento-correctivo.jpg" alt="Mantenimiento" class="w-full h-56 object-cover">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Mantenimiento Preventivo</h3>
-                        <p class="text-gray-400">Programas planificados para maximizar la vida útil de tus equipos.</p>
-                    </div>
-                </div>
-                <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/sistemas-hidraulicos.jfif" alt="Hidráulicos" class="w-full h-56 object-cover">
+                    <img src="./attachments/mangueras-sistema-hidraulico.jpg" alt="Sistemas Hidráulicos" class="w-full h-56 object-cover">
                     <div class="p-8">
                         <h3 class="text-2xl font-semibold mb-3">Sistemas Hidráulicos</h3>
-                        <p class="text-gray-400">Diagnóstico, reparación y optimización de sistemas hidráulicos.</p>
+                        <p class="text-gray-400">Mangueras, bombas, cilindros y mantenimiento completo de sistemas hidráulicos.</p>
                     </div>
                 </div>
+
                 <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/Sensores-IoT-y-monitoreo.jpg" alt="IoT" class="w-full h-56 object-cover">
+                    <img src="./attachments/fallas-confiabilidad.webp" alt="Análisis de Fallas" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-3">Análisis de Fallas y Confiabilidad</h3>
+                        <p class="text-gray-400">Identificación y prevención de fallas para reducir tiempos de inactividad.</p>
+                    </div>
+                </div>
+
+                <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
+                    <img src="./attachments/Sensores-IoT-y-monitoreo.jpg" alt="Monitoreo IoT" class="w-full h-56 object-cover">
                     <div class="p-8">
                         <h3 class="text-2xl font-semibold mb-3">Monitoreo IoT</h3>
-                        <p class="text-gray-400">Sensores en tiempo real para control total de tu maquinaria.</p>
+                        <p class="text-gray-400">Sensores en tiempo real para control de operación y estado de la maquinaria.</p>
                     </div>
                 </div>
+
                 <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/inteligencia-predictiva.jpg" alt="IA" class="w-full h-56 object-cover">
+                    <img src="./attachments/inteligencia-predictiva.jpg" alt="Mantenimiento Predictivo" class="w-full h-56 object-cover">
                     <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Inteligencia Predictiva</h3>
-                        <p class="text-gray-400">Predicción de fallas mediante inteligencia artificial.</p>
+                        <h3 class="text-2xl font-semibold mb-3">Mantenimiento Predictivo</h3>
+                        <p class="text-gray-400">Programas planificados y predictivos para prolongar la vida útil de los equipos.</p>
                     </div>
                 </div>
+
                 <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                    <img src="./attachments/informes.jpg" alt="Reportes" class="w-full h-56 object-cover">
+                    <img src="./attachments/informes.jpg" alt="Reportes Técnicos" class="w-full h-56 object-cover">
                     <div class="p-8">
                         <h3 class="text-2xl font-semibold mb-3">Reportes Técnicos</h3>
-                        <p class="text-gray-400">Informes detallados y análisis de rendimiento.</p>
+                        <p class="text-gray-400">Informes detallados con recomendaciones y análisis de rendimiento.</p>
                     </div>
                 </div>
             </div>
@@ -115,52 +116,47 @@
     <section id="nosotros" class="py-24 bg-black">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
             <div class="bg-zinc-900 p-10 rounded-3xl">
-                <h3 class="text-amber-400 text-xl font-bold mb-6">NUESTRA MISIÓN</h3>
-                <p class="text-gray-300 leading-relaxed">
-                    Brindar soluciones innovadoras en mantenimiento y monitoreo inteligente de maquinaria pesada, integrando ingeniería y tecnologías IoT e IA.
-                </p>
+                <h3 class="text-amber-400 uppercase tracking-widest mb-4">Nuestra Misión</h3>
+                <p class="text-gray-300">Brindar soluciones técnicas de alto nivel en mantenimiento y monitoreo de maquinaria pesada utilizando tecnología moderna.</p>
             </div>
             <div class="bg-zinc-900 p-10 rounded-3xl">
-                <h3 class="text-amber-400 text-xl font-bold mb-6">NUESTRA VISIÓN</h3>
-                <p class="text-gray-300 leading-relaxed">
-                    Ser la empresa líder en el sur del Perú en mantenimiento predictivo basado en inteligencia artificial.
-                </p>
+                <h3 class="text-amber-400 uppercase tracking-widest mb-4">Nuestra Visión</h3>
+                <p class="text-gray-300">Ser la empresa referente en el sur del Perú en mantenimiento predictivo de maquinaria pesada.</p>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer id="contacto" class="bg-black py-16">
+    <footer id="contacto" class="bg-black py-16 border-t border-zinc-800">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <img src="./attachments/logo.png" alt="Logo" class="h-16 mx-auto mb-6 opacity-75">
-            <p class="text-3xl font-bold mb-2">ANDES HEAVY TECH S.A.C.</p>
-            <p class="text-amber-400 text-xl mb-8">951 728 950</p>
-            <p class="text-gray-500">© 2026 Andes Heavy Tech. Todos los derechos reservados.</p>
+            <img src="./attachments/logo.png" alt="Andes Heavy Tech" class="h-16 mx-auto mb-6">
+            <p class="text-4xl font-bold mb-3">ANDES HEAVY TECH S.A.C.</p>
+            <p class="text-2xl text-amber-400 mb-8">951 728 950</p>
+            <p class="text-gray-500">© 2026 Andes Heavy Tech S.A.C. | Sur del Perú</p>
         </div>
     </footer>
 
     <!-- CHATBOT -->
-    <div class="fixed bottom-6 right-6 z-[100]">
-        <button onclick="toggleChat()" 
-                class="chatbot-toggle w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-3xl shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition">
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleChat()" class="w-16 h-16 bg-amber-500 hover:bg-amber-400 rounded-3xl shadow-2xl flex items-center justify-center text-3xl transition">
             <i class="fa-solid fa-headset"></i>
         </button>
-
-        <div id="chat-window" class="hidden w-96 bg-zinc-900 rounded-3xl shadow-2xl border border-zinc-700 fixed bottom-28 right-6 overflow-hidden">
+        
+        <div id="chat-window" class="hidden fixed bottom-28 right-6 w-96 bg-zinc-900 rounded-3xl shadow-2xl border border-zinc-700 overflow-hidden">
             <div class="bg-zinc-800 p-5 flex items-center justify-between">
                 <div class="flex items-center gap-3">
                     <span class="text-3xl">🤖</span>
                     <div>
                         <p class="font-semibold">Asistente Técnico</p>
-                        <p class="text-emerald-400 text-sm">● En línea 24/7</p>
+                        <p class="text-emerald-400 text-sm">● En línea</p>
                     </div>
                 </div>
-                <button onclick="toggleChat()" class="text-3xl text-gray-400 hover:text-white">×</button>
+                <button onclick="toggleChat()" class="text-3xl">×</button>
             </div>
-            <div id="chat-messages" class="h-96 p-5 overflow-y-auto space-y-4 bg-zinc-950"></div>
+            <div id="chat-messages" class="h-96 p-5 overflow-y-auto space-y-4"></div>
             <div class="p-4 border-t border-zinc-700">
-                <input id="chat-input" type="text" placeholder="¿En qué te puedo ayudar?" 
-                       class="w-full bg-zinc-800 border border-zinc-600 rounded-3xl px-6 py-4 outline-none focus:border-amber-400"
+                <input id="chat-input" type="text" placeholder="¿Qué necesitas?" 
+                       class="w-full bg-zinc-800 border border-zinc-600 rounded-3xl px-6 py-4 text-sm focus:border-amber-400 outline-none"
                        onkeypress="if(event.key === 'Enter') sendMessage()">
             </div>
         </div>
@@ -168,34 +164,26 @@
 
     <script>
         function toggleChat() {
-            const chat = document.getElementById('chat-window');
-            chat.classList.toggle('hidden');
-            if (!chat.classList.contains('hidden') && document.getElementById('chat-messages').children.length === 0) {
-                setTimeout(() => {
-                    addMessage("¡Hola! Soy el asistente técnico de Andes Heavy Tech. ¿Cómo puedo ayudarte hoy?", "bot");
-                }, 500);
-            }
+            document.getElementById('chat-window').classList.toggle('hidden');
         }
-
         function addMessage(text, type) {
             const container = document.getElementById('chat-messages');
-            const msg = document.createElement('div');
+            const div = document.createElement('div');
             if (type === "bot") {
-                msg.innerHTML = `<div class="flex gap-3"><div class="bg-zinc-700 text-white p-4 rounded-3xl rounded-tl-none">${text}</div></div>`;
+                div.innerHTML = `<div class="flex gap-3"><div class="bg-zinc-700 p-4 rounded-3xl rounded-tl-none">${text}</div></div>`;
             } else {
-                msg.innerHTML = `<div class="flex justify-end"><div class="bg-amber-500 text-zinc-950 p-4 rounded-3xl rounded-tr-none">${text}</div></div>`;
+                div.innerHTML = `<div class="flex justify-end"><div class="bg-amber-500 text-zinc-950 p-4 rounded-3xl rounded-tr-none">${text}</div></div>`;
             }
-            container.appendChild(msg);
+            container.appendChild(div);
             container.scrollTop = container.scrollHeight;
         }
-
         function sendMessage() {
             const input = document.getElementById('chat-input');
             if (!input.value.trim()) return;
             addMessage(input.value, "user");
-            
-            const response = "Gracias por tu mensaje. Un técnico se comunicará contigo pronto al 951 728 950.";
-            setTimeout(() => addMessage(response, "bot"), 800);
+            setTimeout(() => {
+                addMessage("Gracias por tu consulta. Te contactaremos pronto al 951 728 950.", "bot");
+            }, 700);
             input.value = '';
         }
     </script>
