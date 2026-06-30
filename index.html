@@ -14,9 +14,8 @@
 
         .hero-bg {
             background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
-                        url('https://images.unsplash.com/photo-1504915139833-9f7d1d4c3c3d') center/cover no-repeat fixed;
+                        url('./attachments/fondo-industrial.jpg') center/cover no-repeat fixed;
         }
-        .service-card:hover { transform: translateY(-15px) scale(1.03); }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
@@ -25,10 +24,10 @@
     <header class="bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800 sticky top-0 z-50">
         <div class="max-w-screen-2xl mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center gap-x-4">
-                <img src="https://i.ibb.co.com/0jZfKqY/andes-logo.png" onerror="this.src='https://via.placeholder.com/300x100/CA8A04/ffffff?text=ANDES'" alt="Logo" class="h-16">
+                <img src="./attachments/logo.png" alt="Andes Heavy Tech" class="h-16">
                 <div>
                     <span class="title-font text-3xl font-bold tracking-tighter">ANDES</span>
-                    <span class="block text-amber-400 text-xs font-mono">HEAVY TECH S.A.C.</span>
+                    <span class="block text-amber-400 text-xs font-mono tracking-widest">HEAVY TECH S.A.C.</span>
                 </div>
             </div>
             
@@ -39,31 +38,25 @@
                 <a href="#contacto" class="hover:text-amber-400 transition">Contacto</a>
             </nav>
             
-            <a href="tel:951728950" class="bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold px-8 py-4 rounded-2xl flex items-center gap-3 transition-all">
+            <a href="tel:951728950" 
+               class="bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold px-8 py-4 rounded-2xl flex items-center gap-3 transition-all">
                 <i class="fa-solid fa-phone"></i> 951 728 950
             </a>
-
-            <button id="menuBtn" class="md:hidden text-3xl"><i class="fa-solid fa-bars"></i></button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-zinc-900 py-6 border-t border-zinc-700">
-            <div class="px-8 flex flex-col gap-6 text-lg">
-                <a href="#inicio" class="mobile-link">Inicio</a>
-                <a href="#servicios" class="mobile-link">Servicios</a>
-                <a href="#nosotros" class="mobile-link">Nosotros</a>
-                <a href="#contacto" class="mobile-link">Contacto</a>
-            </div>
         </div>
     </header>
 
     <!-- HERO -->
-    <section id="inicio" class="hero-bg h-screen flex items-center">
+    <section id="inicio" class="hero-bg h-screen flex items-center relative">
         <div class="max-w-screen-2xl mx-auto px-6 text-center">
-            <h1 class="title-font text-6xl md:text-7xl font-bold leading-none mb-6">MANTENIMIENTO<br><span class="text-amber-400">INTELIGENTE</span></h1>
-            <p class="text-2xl text-gray-200 max-w-2xl mx-auto mb-10">Tecnología + Experiencia para tu maquinaria pesada</p>
-            <a href="tel:951728950" class="inline-flex items-center gap-4 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xl px-12 py-6 rounded-3xl transition-all">
-                LLAMAR AHORA <i class="fa-solid fa-phone"></i>
+            <h1 class="title-font text-6xl md:text-7xl font-bold leading-none mb-6 tracking-tighter">
+                MANTENIMIENTO<br><span class="text-amber-400">INTELIGENTE</span>
+            </h1>
+            <p class="text-2xl text-gray-200 max-w-2xl mx-auto mb-10">
+                Soluciones avanzadas para maquinaria pesada en minería y construcción
+            </p>
+            <a href="tel:951728950" 
+               class="inline-flex items-center gap-4 bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xl px-12 py-6 rounded-3xl transition-all">
+                📞 LLAMAR AHORA
             </a>
         </div>
     </section>
@@ -78,59 +71,53 @@
 
     <!-- NOSOTROS -->
     <section id="nosotros" class="py-24 bg-black">
-        <div class="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+        <div class="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-10">
                 <div>
-                    <h3 class="text-amber-400 text-2xl font-bold mb-4">MISIÓN</h3>
+                    <h3 class="text-amber-400 text-2xl font-bold mb-4">NUESTRA MISIÓN</h3>
                     <p class="text-gray-300">Brindar soluciones innovadoras en mantenimiento y monitoreo inteligente de maquinaria pesada.</p>
                 </div>
                 <div>
-                    <h3 class="text-amber-400 text-2xl font-bold mb-4">VISIÓN</h3>
+                    <h3 class="text-amber-400 text-2xl font-bold mb-4">NUESTRA VISIÓN</h3>
                     <p class="text-gray-300">Ser líderes en mantenimiento predictivo en el sur del Perú.</p>
                 </div>
             </div>
-            <img src="https://images.unsplash.com/photo-1581092160607-5e1c1b3c2c2f" class="rounded-3xl" alt="Maquinaria">
+            <img src="./attachments/fondo-industrial.jpg" class="rounded-3xl shadow-2xl" alt="Maquinaria Pesada">
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer id="contacto" class="bg-zinc-950 py-20 text-center">
-        <img src="https://i.ibb.co.com/0jZfKqY/andes-logo.png" alt="Logo" class="h-20 mx-auto mb-6">
-        <p class="text-4xl font-bold mb-2">ANDES HEAVY TECH S.A.C.</p>
-        <a href="tel:951728950" class="text-3xl text-amber-400 hover:underline block mb-8">📞 951 728 950</a>
-        <p class="text-gray-500">Arequipa • Sur del Perú</p>
+        <img src="./attachments/logo.png" alt="Logo" class="h-20 mx-auto mb-6">
+        <p class="text-4xl font-bold mb-3">ANDES HEAVY TECH S.A.C.</p>
+        <a href="tel:951728950" class="text-3xl text-amber-400 hover:underline">951 728 950</a>
+        <p class="text-gray-500 mt-6">Arequipa • Sur del Perú</p>
     </footer>
 
     <script>
-        // Servicios
         const services = [
-            { img: "https://images.unsplash.com/photo-1581092160607-5e1c1b3c2c2f", title: "Diagnóstico de Motores", desc: "Análisis profesional de motores diésel" },
-            { img: "https://images.unsplash.com/photo-1504915139833-9f7d1d4c3c3d", title: "Sistemas Hidráulicos", desc: "Reparación y optimización" },
-            { img: "https://images.unsplash.com/photo-1518770660439-4636190af475", title: "Monitoreo IoT", desc: "Datos en tiempo real" },
-            { img: "https://images.unsplash.com/photo-1581093588401-9f6f3e3e3e3e", title: "IA Predictiva", desc: "Predicción de fallas" },
-            { img: "https://images.unsplash.com/photo-1581091226825-a6a35f6b8e5c", title: "Mantenimiento Preventivo", desc: "Programas especializados" },
-            { img: "https://images.unsplash.com/photo-1581092162385-8c6c3d2c3c3c", title: "Reportes Técnicos", desc: "Informes detallados" }
+            { img: "./attachments/motor-diesel.jpg", title: "Diagnóstico de Motores" },
+            { img: "./attachments/mangueras-sistema-hidraulico.jpg", title: "Sistemas Hidráulicos" },
+            { img: "./attachments/Sensores-IoT-y-monitoreo.jpg", title: "Monitoreo IoT" },
+            { img: "./attachments/inteligencia-predictiva.jpg", title: "IA Predictiva" },
+            { img: "./attachments/fallas-confiabilidad.webp", title: "Análisis de Fallas" },
+            { img: "./attachments/informes.jpg", title: "Reportes Técnicos" }
         ];
 
         function createServices() {
             const container = document.getElementById('services-grid');
-            services.forEach(s => {
-                container.innerHTML += `
-                    <div class="service-card bg-zinc-800 rounded-3xl overflow-hidden">
-                        <img src="${s.img}" class="w-full h-64 object-cover">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-semibold mb-3">${s.title}</h3>
-                            <p class="text-gray-400">${s.desc}</p>
-                        </div>
-                    </div>`;
+            services.forEach(service => {
+                const div = document.createElement('div');
+                div.className = "bg-zinc-800 rounded-3xl overflow-hidden";
+                div.innerHTML = `
+                    <img src="${service.img}" class="w-full h-64 object-cover" alt="${service.title}">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-3">${service.title}</h3>
+                    </div>
+                `;
+                container.appendChild(div);
             });
         }
-
-        // Mobile Menu
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        });
 
         window.onload = createServices;
     </script>
